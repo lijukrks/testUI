@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import VerifyPage from "./VerifyPage";
 import {verifyAction,verifyFormChange} from '../../redux/actions'
+import './index.scss';
 
 
 

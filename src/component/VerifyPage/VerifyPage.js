@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link,Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class VerifyPage extends React.Component {
     constructor(props) {
@@ -18,33 +18,32 @@ class VerifyPage extends React.Component {
         }
     }
 
-    generateRequestBody(){
-        return {   
+    generateRequestBody() {
+        return {
             "code": this.props.verifyPageReducer.code,
-            "username":this.props.location.search.split("?username=")[1],
+            "username": this.props.location.search.split("?username=")[1],
         }
     }
 
     render() {
 
-        if(this.props.verifyPageReducer.verificationResponse&&this.props.verifyPageReducer.verificationResponse.code == "userVerificationSuccess"){
+        if (this.props.verifyPageReducer.verificationResponse && this.props.verifyPageReducer.verificationResponse.code == "userVerificationSuccess") {
             return (
                 <Redirect
-                  to="/login"
+                    to="/login"
                 />
-              );
+            );
         }
-      
+
         return (
-            <div>
-                <h2>Register</h2>
-                    <div>
-                        <input type="text"  name="code" placeholder="enter code"  onChange={this.handleInputChange} />
-                        
-                    </div>
-                    <div className="form-group">
-                        <button className="btn btn-primary" onClick={this.handleSubmit}>Register</button>
-                    </div>
+            <div className="verify-warpper">
+                <div className="verify-warpper__content">
+                    <h3>Register</h3>
+                    <ul className="verify-warpper__content--list">
+                        <li> <input type="text" className="form-control" name="code" placeholder="enter code" onChange={this.handleInputChange} /></li>
+                        <li><span> <button className="btn btn-primary" onClick={this.handleSubmit}>Register</button></span></li>
+                    </ul>
+                </div>
             </div>
         );
     }
