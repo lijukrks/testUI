@@ -1,9 +1,7 @@
 import { connect } from 'react-redux';
-import {loginAction,loginFormChange} from '../../redux/actions'
+import { loginAction, loginFormChange } from '../../redux/actions'
 import Login from "./Login";
-
-
-
+import './index.scss';
 const mapStateToProps = state => {
     return { ...state } || {}
 }

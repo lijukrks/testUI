@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import Register from "./Register";
 import {registerAction,registerFormChange} from '../../redux/actions'
+import './index.scss';
 
 
 
