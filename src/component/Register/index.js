@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import {registerAction} from '../../actions'
 import Register from "./Register";
+import {registerAction,registerFormChange} from '../../redux/actions'
 
 
 
@@ -10,9 +10,11 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-      
-        registerUser: (params) => {
+        registerAction: (params) => {
             dispatch(registerAction(params));
+        },
+        registerFormChange: (params) => {
+            dispatch(registerFormChange(params));
         }
     }
 }
