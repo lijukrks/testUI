@@ -1,0 +1,32 @@
+@import "../../sass/main";
+
+.main-header {
+    @extend .flexbox;
+    @extend .item-center;
+    min-height: 60px;
+    padding: 0px 30px;
+    background-color: $white-color;
+    @include box-shadow(1px, 0px, 8px, rgba(0, 0, 0, 0.06));
+    @include transition (all 0.8s ease-in-out);
+
+    .brand {
+        flex: 0 auto;
+    }
+
+    .navigation {
+        flex: 0 auto;
+        margin-left: auto;
+        @extend .flexbox;
+        @extend .item-center;
+
+        li {
+            flex: 0 auto;
+
+            a {
+                display: block;
+                cursor: pointer;
+                font-size: 13px;
+            }
+        }
+    }
+}
