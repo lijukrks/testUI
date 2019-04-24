@@ -16,6 +16,15 @@ import {
     verifyFormChange
 } from './verifyPageActions'
 
+import {
+    forgotPasswordAction,
+    forgotPasswordFormChange
+}from './forgotPasswordPageAction'
+
+import {
+    resetPasswordAction,
+    resetFormChange
+}from './resetPasswordPageAction'
 
 
 export {
@@ -24,5 +33,9 @@ export {
     registerAction,
     registerFormChange,
     verifyAction,
-    verifyFormChange
+    verifyFormChange,
+    forgotPasswordAction,
+    forgotPasswordFormChange,
+    resetPasswordAction,
+    resetFormChange
 }

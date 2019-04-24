@@ -7,6 +7,10 @@ export const API_BASE_STAGE_URL = "/dev/api";
 
 export const LOGIN_URL = "/users/nativelogin";
 
-export const REGISTER_URL = "users/nativesignup";
+export const REGISTER_URL = "/users/nativesignup";
 
-export const VERIFY_URL = "users/nativeconfirmcode";
+export const VERIFY_URL = "/users/nativeconfirmcode";
+
+export const FORGOT_PASSWORD_URL= "/users/nativeforgotpassword";
+
+export const RESET_URL ="/users/nativeresetpassword";

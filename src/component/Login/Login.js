@@ -60,6 +60,8 @@ render(){
                         Login
                 </button>
                 <Link to="/register" className="btn btn-link">register</Link>
+                <Link to="/forgot" className="btn btn-link">Forgot Password</Link>
+
             </div>
         )
     }

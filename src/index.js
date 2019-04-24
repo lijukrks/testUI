@@ -14,6 +14,7 @@ import Register from './component/Register'
 import VerifyPage from './component/VerifyPage'
 
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import ForgotPassword from './component/ForgotPassword';
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
@@ -22,6 +23,7 @@ ReactDOM.render(
           <Router>
           <Switch>
                 <Route path="/login" component={Login} />
+                <Route path="/forgot" component={ForgotPassword} />
                 <Route path="/register" component={Register} />
                 <Route path="/verify" component={VerifyPage} />
                 <Route path="/" component={MainFrame} />
